@@ -1,0 +1,7 @@
+CHIP IsNegative {
+    IN a[16];
+    OUT out;
+
+    PARTS:
+    Or16Way(a[15]=a[15],a[0..14]=false,out=out);
+}

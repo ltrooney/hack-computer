@@ -1,0 +1,188 @@
+function Memory.init 0
+push constant 0
+pop static 6
+push constant 2048
+pop static 7
+push constant 14335
+pop static 8
+push static 8
+call Array.new 1
+pop static 4
+push static 7
+pop static 4
+push constant 0
+pop static 5
+push constant 0
+return
+function Memory.peek 0
+push argument 0
+push static 6
+add
+pop pointer 1
+push that 0
+return
+function Memory.poke 0
+push argument 0
+push static 6
+add
+push argument 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+return
+function Memory.alloc 5
+push constant 0
+pop local 4
+push constant 0
+pop local 0
+push argument 0
+push constant 1
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 5
+call Sys.error 1
+pop temp 0
+label IF_FALSE0
+push argument 0
+push constant 0
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 5
+call Sys.error 1
+pop temp 0
+label IF_FALSE1
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 1
+pop argument 0
+label IF_FALSE2
+label WHILE_EXP0
+push local 0
+push static 8
+lt
+not
+if-goto WHILE_END0
+push local 0
+push static 4
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 1
+call Array.length 1
+push argument 0
+sub
+pop local 3
+push local 1
+call Array.length 1
+push argument 0
+lt
+not
+push local 4
+not
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+pop local 4
+push local 3
+push constant 0
+gt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push argument 0
+call Array.new 1
+pop local 2
+push local 1
+pop local 2
+push local 0
+push static 4
+add
+push local 3
+call Array.new 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END4
+label IF_FALSE4
+push local 1
+pop local 2
+push local 1
+call Array.dispose 1
+pop temp 0
+label IF_END4
+label IF_FALSE3
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push local 2
+push constant 0
+eq
+not
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push local 2
+pop static 3
+goto IF_END5
+label IF_FALSE5
+push constant 0
+return
+label IF_END5
+push constant 1
+neg
+push static 3
+add
+push argument 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push static 3
+return
+function Memory.deAlloc 3
+push argument 0
+push constant 1
+sub
+pop local 0
+push constant 1
+neg
+push argument 0
+add
+pop pointer 1
+push that 0
+pop local 1
+push static 4
+call Array.length 1
+pop local 2
+push local 2
+push static 4
+add
+push local 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 2
+pop static 5
+push constant 0
+return

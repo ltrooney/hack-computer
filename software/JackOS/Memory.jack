@@ -1,0 +1,114 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Memory.jack
+
+/**
+ * Memory operations library.
+ */ 
+class Memory {
+
+    static Array segment; // the current memory segment
+    static Array block; // the block of memory that the segment exists in
+
+    static Array freeList; // array of free memory segments
+    static int freeListLength; // maintains the number of free segments
+
+    static Array memory; // all memory segments
+    static int heapBase;
+    static int heapLength;
+
+    /** Initializes memory parameters. */
+    function void init() {
+        let memory = 0; // base of the memory array points to the first address in RAM
+        let heapBase = 2048; // first address of the heap segment
+        let heapLength = 14335; // 16383 - 2048
+        let freeList = Array.new(heapLength);
+        let freeListLength = heapLength; // the whole memory block is free
+        let freeList = heapBase; // freeList starts at the base of the heap (RAM[2048])
+        return;
+    }   
+
+    /** Returns the value of the main memory at the given address. */
+    function int peek(int address) {
+        return memory[address];
+    }
+
+    /** Sets the value of the main memory at this address
+     *  to the given value. */
+    function void poke(int address, int value) {
+        let memory[address] = value;
+        return;
+    }
+
+    /** finds and allocates from the heap a memory block of the 
+     *  specified size and returns a reference to its base address. */
+    function int alloc(int size) {
+        var int i, spaceGap;
+        var Array seg, chosenSegment;
+        var boolean segHasBeenFound;
+
+        let segHasBeenFound = false;
+
+        if(size < 1) {
+            do Sys.error(5);
+        }
+        if(size < 0) {
+            do Sys.error(5);
+        }
+        if(size = 0) {
+            let size = 1;
+        }
+
+        let i = 0;
+        while(i < freeListLength) { // heapLength = size of freeList
+            let seg = freeList[i];
+            let spaceGap = seg[0] - size; // seg[0] == seg.length
+
+            // finds the first free segment that has enough space
+            if((~(seg[0] < size)) & (~segHasBeenFound)) {   
+                let segHasBeenFound = true;
+                let chosenSegment = Array.new(size); // uses only the required amount of space
+
+                if(spaceGap > 0) {
+                    let chosenSegment = seg; // sets the base pointer to seg
+                    let freeList[i] = Array.new(spaceGap); // segment in freeList becomes whatever space was not used
+                } else { // spaceGap = 0 (no space left in the segment)
+                    do seg.dispose(); // disposes of the segment in freeList
+                }
+            }
+            let i = i + 1;
+        }
+
+        // if ~segHasBeenFound, then defragment memory
+
+        if(~(chosenSegment = null)) { // See if there is a segment. If there is then choose it.
+            let block = chosenSegment; // revise this to only choose needed part of the block
+        } else {
+            return 0; 
+        }   
+
+        let block[-1] = size + 1;
+        return block;
+    }
+
+    /** De-allocates the given object and frees its space. */
+    function void deAlloc(int object) {
+        var Array segment;
+        var int segmentLength;
+        var int lastIndex;
+
+        let segment = object - 1; 
+        let segmentLength = object[-1];
+
+        let lastIndex = freeListLength;
+        let freeList[lastIndex] = segment;
+        let next = lastIndex;
+        
+        return;
+    }    
+
+    function void defragment() {
+        // to complete
+    }
+}

@@ -1,0 +1,151 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Math.jack
+
+/**
+ * A basic math library.
+ */
+class Math {
+
+    static Array twoToThe;
+    static int n; // number of bits in an integer
+
+    /** Initializes the library. */
+    function void init() {
+        var int i, powerOfTwo;
+
+        let twoToThe = Array.new(16);
+        let twoToThe[0] = 1;
+        let i = 1;
+        let powerOfTwo = 2;
+        let n = 16;
+
+        // twoToThe = { 1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768 }
+        while(i < n) { 
+            let twoToThe[i] = powerOfTwo;
+            let powerOfTwo = powerOfTwo + powerOfTwo;
+            let i = i + 1;
+        }
+
+        return;
+    }
+
+    function boolean bit(int x, int j) {
+        // returns true if the j-th bit of x is 1 and false otherwise
+        if((x & twoToThe[j]) = 0) { // 0 means that none of the bits matched
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /** Returns the absolute value of x. */
+    function int abs(int x) {
+        if(~(x < 0)) {
+            return x;
+        } else {
+            return -x;
+        } 
+    }
+
+    /** Returns the product of x and y. */
+    function int multiply(int x, int y) {
+        var int sum, shiftedX, j;
+        var boolean jthBitOfY;
+
+        if(~((x < 0) & (y < 0))) { // x and y must be non-negative to pass
+            let sum = 0;
+            let shiftedX = x;
+            let j = 0;
+            while(j < n) {
+                let jthBitOfY = Math.bit(y, j);
+                if(jthBitOfY) {
+                    let sum = sum + shiftedX;
+                }
+                let j = j + 1;
+                let shiftedX = shiftedX + shiftedX; // this is the same as shifting x to the left by 1 spot
+            }
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    /** Returns the integer part of x/y. */
+    function int divide(int x, int y) {
+        var int q;
+        var boolean negativeQuotient;
+
+        let negativeQuotient = false;
+        if(((x < 0) & ~(y < 0)) | (~(x < 0) & (y < 0))) {
+            let negativeQuotient = true;
+        }
+        let x = Math.abs(x);
+        let y = Math.abs(y);
+
+        if(~(x < 0) & (y > 0)) { // x must be non-negative, y must be positive to pass
+            if(y > x) {
+                return 0; // denominator is larger than numerator so quotient < 1 (it is truncated)
+            } 
+
+            let q = Math.divide(x, y + y); // divide(x, 2 * y)
+
+            if((x - (2*q*y)) < y) {
+                if(negativeQuotient) {
+                    return -(q + q);
+                }
+                return q + q; // return 2 * q
+            } else {
+                if(negativeQuotient) {
+                    return -(q + q + 1);
+                }
+                return q + q + 1; // return (2 * q) + 1
+            }
+        } else {
+            return 0;
+        }
+    }
+
+    /** Returns the integer part of the square root of x. */
+    function int sqrt(int x) {
+        var int y, j, n, condValue;
+        var int twoToTheJ; // holds the value of 2^j
+        var int tempJ; // temporarily holds the value of j in order to compute twoToTheJ
+
+        let y = 0;
+        let n = 16; 
+        let j = Math.divide(n, 2) - 1; // j = n/2 - 1
+        
+
+        
+        while(~(j < 0)) {
+            let twoToTheJ = twoToThe[j];
+            let condValue = (y + twoToTheJ) * (y + twoToTheJ); // holds the value (y + 2^j)^2
+
+            if(~(condValue > x) & (condValue > 0)) {
+                let y = y + twoToTheJ;
+            }
+            let j = j - 1;
+        }
+        return y;
+    }
+
+    /** Returns the greater number. */
+    function int max(int a, int b) {
+        if(a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    /** Returns the smaller number. */
+    function int min(int a, int b) {
+        if(b > a) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+}

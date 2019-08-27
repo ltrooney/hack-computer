@@ -1,0 +1,194 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Screen.jack
+
+/**
+ * Graphic screen library.
+ */
+class Screen {
+
+    // TODO: in drawPixel() make sure to only change the c%16th bit of the address rather than all bits of the address
+    
+    static boolean color;
+    static Array twoToThe;
+
+    /** Initializes the Screen. */
+    function void init() {
+        var int i;
+        var int powerOfTwo;
+
+        do Screen.clearScreen();
+        do Screen.setColor(true);
+
+        let twoToThe = Array.new(16);
+        let twoToThe[0] = 1;
+        let i = 1;
+        let powerOfTwo = 2;
+
+        // twoToThe = { 1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768 }
+        while(i < 16) { 
+            let twoToThe[i] = powerOfTwo;
+            let powerOfTwo = powerOfTwo + powerOfTwo;
+            let i = i + 1;
+        }
+
+        return;
+    }
+
+    /** Erases the whole screen. */
+    function void clearScreen() {
+        var int screenMemoryStartAddr;
+        var int i;
+        var int totalScreenWords;
+
+        let screenMemoryStartAddr = 16384;
+        let totalScreenWords = 8191;
+        let i = 0;
+
+        while(i < totalScreenWords) {
+            do Memory.poke(screenMemoryStartAddr + i, 0);
+            let i = i + 1;
+        }
+        return;
+    }
+
+    /** Sets the color to be used in further draw commands
+     *  where white = false, black = true. */
+    function void setColor(boolean b) {
+        let color = b;
+        return;
+    }
+
+    /** Draws the (x, y) pixel. */
+    function void drawPixel(int x, int y) {
+        var int registerToSet;
+        var int newValue;
+        var int a;
+        var int b;
+        var int i;
+        if(~(y < 0) & ~(y > 255) & ~(x < 0) & ~(x > 511)) { // make sure the pixel is in the screen range 
+            let registerToSet = 16384 + (y * 32) + (x / 16);
+            let a = Memory.peek(registerToSet);
+            let b = x-((x/16)*16); // this evaluates x%16: a number 0-15
+            let b = twoToThe[b];
+
+            if(color) {
+                let newValue = a | b; // Screen[r*32+c/16] | c%16
+            } else {
+                let newValue = a & ~b; // Screen[r*32+c/16] & ~c%16
+            }
+            do Memory.poke(registerToSet, newValue);
+        }
+        return;
+    }
+
+    /** Draws a line from (x1, y1) to (x2, y2). */
+    function void drawLine(int x1, int y1, int x2, int y2) {
+        var int a;
+        var int b;
+        var int dx;
+        var int dy;
+        var int adyMinusbdx;
+
+        let a = 0;
+        let b = 0;
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        let adyMinusbdx = 0;
+
+        if((Math.abs(dx) > 0) & (Math.abs(dy) > 0)) {
+            while(~(a > Math.abs(dx)) & ~(b > Math.abs(dy))) {
+                if(dx > 0) {
+                    if(dy > 0) {
+                        do Screen.drawPixel(x1 + a, y1 + b);
+                    }
+                    if(dy < 0) {
+                        do Screen.drawPixel(x1 + a, y1 - b);
+                    } 
+                }
+                if(dx < 0) {
+                    if(dy > 0) {
+                        do Screen.drawPixel(x1 - a, y1 + b);
+                    }
+                    if(dy < 0) {
+                        do Screen.drawPixel(x1 - a, y1 - b);
+                    } 
+                }
+
+                if(~(adyMinusbdx > 0)) {
+                    let a = a + 1;
+                    let adyMinusbdx = adyMinusbdx + Math.abs(dy);
+                } else {
+                    let b = b + 1;
+                    let adyMinusbdx = adyMinusbdx - Math.abs(dx);
+                }
+            }
+        } else { // dx or dy = 0
+            if(dx = 0) {
+                if(dy = 0) {
+                    do Screen.drawPixel(x1, y1);
+                } else {
+                    while(~(b > Math.abs(dy))) { // b <= dy
+                        if(dy < 0) {
+                            do Screen.drawPixel(x1, y1 - b);
+                        }
+                        if(dy > 0) {
+                            do Screen.drawPixel(x1, y1 + b);
+                        }
+                        let b = b + 1;
+                    }
+                }    
+            }
+            if(dy = 0) {
+                while(~(a > Math.abs(dx))) { // b <= dy
+                    if(dx < 0) {
+                        do Screen.drawPixel(x1 - a, y1);
+                    }
+                    if(dx > 0) {
+                        do Screen.drawPixel(x1 + a, y1);
+                    }
+                    let a = a + 1;
+                }
+            }
+        }
+        return;
+    }
+
+    /** Draws a filled rectangle where the top left corner
+     *  is (x1, y1) and the bottom right corner is (x2, y2). */
+    function void drawRectangle(int x1, int y1, int x2, int y2) {
+        var int dy;
+        var int offset;
+        let offset = 0;
+        let dy = y1;
+
+        while(~(dy > y2)) {
+            do Screen.drawLine(x1, dy, x2, dy);
+            let offset = offset + 1;
+            let dy = y1 + offset;
+        } 
+        return;    
+    }
+
+    /** Draws a filled circle of radius r around (cx, cy). */
+    function void drawCircle(int cx, int cy, int r) {
+        var int x1;
+        var int y1;
+        var int x2;
+        var int y2;
+        var int dy;
+
+        let dy = -r;
+
+        while(~(dy > r)) {
+            let x1 = cx - Math.sqrt((r * r) - (dy * dy));
+            let y1 = cy + dy;
+            let x2 = cx + Math.sqrt((r * r) - (dy * dy));
+            let y2 = y1;
+            do Screen.drawLine(x1, y1, x2, y2);
+            let dy = dy + 1;
+        }
+        return;
+    }
+}
