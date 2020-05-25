@@ -1,0 +1,245 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5F34F937
+P 2100 2000
+AR Path="/5F34F937" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5F34F937" Ref="U?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F937" Ref="U25"  Part="1" 
+F 0 "U25" H 2100 3081 50  0000 C CNN
+F 1 "74LS157" H 2100 2990 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2100 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 2100 2000 50  0001 C CNN
+	1    2100 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34F93D
+P 2100 3100
+AR Path="/5F34F93D" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F34F93D" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F93D" Ref="#PWR0155"  Part="1" 
+F 0 "#PWR0155" H 2100 2850 50  0001 C CNN
+F 1 "GND" H 2105 2927 50  0000 C CNN
+F 2 "" H 2100 3100 50  0001 C CNN
+F 3 "" H 2100 3100 50  0001 C CNN
+	1    2100 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1400 1600 1400
+Wire Wire Line
+	1500 1700 1600 1700
+Wire Wire Line
+	1500 2000 1600 2000
+Wire Wire Line
+	1500 2300 1600 2300
+Wire Wire Line
+	1600 2700 1550 2700
+Text GLabel 1500 2300 0    50   Input ~ 0
+ADD_OUT_3
+Text GLabel 1500 2000 0    50   Input ~ 0
+ADD_OUT_2
+Text GLabel 1500 1700 0    50   Input ~ 0
+ADD_OUT_1
+Text GLabel 1500 1400 0    50   Input ~ 0
+ADD_OUT_0
+Text GLabel 3500 1200 2    50   Input ~ 0
+OUT_0
+Text GLabel 3500 1800 2    50   Input ~ 0
+OUT_1
+Text GLabel 3500 2400 2    50   Input ~ 0
+OUT_2
+Text GLabel 3500 3000 2    50   Input ~ 0
+OUT_3
+$Comp
+L 74xx:74LS86 U?
+U 1 1 5F34F961
+P 3200 1200
+AR Path="/5EEBD170/5F34F961" Ref="U?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F961" Ref="U29"  Part="1" 
+F 0 "U29" H 3200 1525 50  0000 C CNN
+F 1 "74LS86" H 3200 1434 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 1200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 1200 50  0001 C CNN
+	1    3200 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 2 1 5F34F967
+P 3200 1800
+AR Path="/5EEBD170/5F34F967" Ref="U?"  Part="2" 
+AR Path="/5EEBE5D5/5F34F967" Ref="U29"  Part="2" 
+F 0 "U29" H 3200 2125 50  0000 C CNN
+F 1 "74LS86" H 3200 2034 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 1800 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 1800 50  0001 C CNN
+	2    3200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 3 1 5F34F96D
+P 3200 2400
+AR Path="/5EEBD170/5F34F96D" Ref="U?"  Part="3" 
+AR Path="/5EEBE5D5/5F34F96D" Ref="U29"  Part="3" 
+F 0 "U29" H 3200 2725 50  0000 C CNN
+F 1 "74LS86" H 3200 2634 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 2400 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 2400 50  0001 C CNN
+	3    3200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 4 1 5F34F973
+P 3200 3000
+AR Path="/5EEBD170/5F34F973" Ref="U?"  Part="4" 
+AR Path="/5EEBE5D5/5F34F973" Ref="U29"  Part="4" 
+F 0 "U29" H 3200 3325 50  0000 C CNN
+F 1 "74LS86" H 3200 3234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 3000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 3000 50  0001 C CNN
+	4    3200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 5 1 5F34F979
+P 8750 2100
+AR Path="/5EEBD170/5F34F979" Ref="U?"  Part="5" 
+AR Path="/5EEBE5D5/5F34F979" Ref="U29"  Part="5" 
+F 0 "U29" H 8980 2146 50  0000 L CNN
+F 1 "74LS86" H 8980 2055 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8750 2100 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 8750 2100 50  0001 C CNN
+	5    8750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F34F97F
+P 2350 1100
+AR Path="/5F34F97F" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F34F97F" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F97F" Ref="#PWR0156"  Part="1" 
+F 0 "#PWR0156" H 2350 950 50  0001 C CNN
+F 1 "+5V" H 2365 1273 50  0000 C CNN
+F 2 "" H 2350 1100 50  0001 C CNN
+F 3 "" H 2350 1100 50  0001 C CNN
+	1    2350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1100 2350 1100
+$Comp
+L power:GND #PWR?
+U 1 1 5F34F986
+P 8750 2600
+AR Path="/5F34F986" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F34F986" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F986" Ref="#PWR0157"  Part="1" 
+F 0 "#PWR0157" H 8750 2350 50  0001 C CNN
+F 1 "GND" H 8755 2427 50  0000 C CNN
+F 2 "" H 8750 2600 50  0001 C CNN
+F 3 "" H 8750 2600 50  0001 C CNN
+	1    8750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F34F98C
+P 8750 1600
+AR Path="/5F34F98C" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F34F98C" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBE5D5/5F34F98C" Ref="#PWR0158"  Part="1" 
+F 0 "#PWR0158" H 8750 1450 50  0001 C CNN
+F 1 "+5V" H 8765 1773 50  0000 C CNN
+F 2 "" H 8750 1600 50  0001 C CNN
+F 3 "" H 8750 1600 50  0001 C CNN
+	1    8750 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 3100 0    50   Input ~ 0
+NO
+Wire Wire Line
+	2700 3100 2800 3100
+Wire Wire Line
+	2800 3100 2800 2500
+Wire Wire Line
+	2800 1300 2900 1300
+Connection ~ 2800 3100
+Wire Wire Line
+	2800 3100 2900 3100
+Wire Wire Line
+	2800 1900 2900 1900
+Connection ~ 2800 1900
+Wire Wire Line
+	2800 1900 2800 1300
+Wire Wire Line
+	2800 2500 2900 2500
+Connection ~ 2800 2500
+Wire Wire Line
+	2800 2500 2800 1900
+Wire Wire Line
+	2600 2000 2700 2000
+Wire Wire Line
+	2600 1400 2600 1100
+Wire Wire Line
+	2600 2300 2600 2900
+Wire Wire Line
+	2700 2000 2700 2300
+Wire Wire Line
+	2600 1100 2900 1100
+Wire Wire Line
+	2600 1700 2900 1700
+Wire Wire Line
+	2600 2900 2900 2900
+Wire Wire Line
+	2700 2300 2900 2300
+Wire Wire Line
+	1100 2600 1600 2600
+Text GLabel 1100 2600 0    50   Input ~ 0
+F
+Wire Wire Line
+	2100 3000 2100 3050
+Text GLabel 1500 2400 0    50   Input ~ 0
+AND_OUT_3
+Text GLabel 1500 2100 0    50   Input ~ 0
+AND_OUT_2
+Text GLabel 1500 1800 0    50   Input ~ 0
+AND_OUT_1
+Text GLabel 1500 1500 0    50   Input ~ 0
+AND_OUT_0
+Wire Wire Line
+	1500 1500 1600 1500
+Wire Wire Line
+	1500 1800 1600 1800
+Wire Wire Line
+	1500 2100 1600 2100
+Wire Wire Line
+	1500 2400 1600 2400
+Wire Wire Line
+	1550 2700 1550 3050
+Wire Wire Line
+	1550 3050 2100 3050
+Connection ~ 2100 3050
+Wire Wire Line
+	2100 3050 2100 3100
+$EndSCHEMATC

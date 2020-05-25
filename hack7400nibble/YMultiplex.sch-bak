@@ -1,0 +1,249 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5F1A5968
+P 2100 2100
+AR Path="/5F1A5968" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5F1A5968" Ref="U?"  Part="1" 
+AR Path="/5EEBD85A/5F1A5968" Ref="U9"  Part="1" 
+F 0 "U9" H 2100 3181 50  0000 C CNN
+F 1 "74LS157" H 2100 3090 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2100 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 2100 2100 50  0001 C CNN
+	1    2100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1A596E
+P 2100 3200
+AR Path="/5F1A596E" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F1A596E" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD85A/5F1A596E" Ref="#PWR0122"  Part="1" 
+F 0 "#PWR0122" H 2100 2950 50  0001 C CNN
+F 1 "GND" H 2105 3027 50  0000 C CNN
+F 2 "" H 2100 3200 50  0001 C CNN
+F 3 "" H 2100 3200 50  0001 C CNN
+	1    2100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1600 1550 1600
+Wire Wire Line
+	1550 1600 1550 1900
+Wire Wire Line
+	1600 1900 1550 1900
+Connection ~ 1550 1900
+Wire Wire Line
+	1550 1900 1550 2200
+Wire Wire Line
+	1600 2200 1550 2200
+Connection ~ 1550 2200
+Wire Wire Line
+	1550 2200 1550 2500
+Wire Wire Line
+	1600 2500 1550 2500
+Connection ~ 1550 2500
+Wire Wire Line
+	1550 2500 1550 2800
+Wire Wire Line
+	1500 1500 1600 1500
+Wire Wire Line
+	1500 1800 1600 1800
+Wire Wire Line
+	1500 2100 1600 2100
+Wire Wire Line
+	1500 2400 1600 2400
+Wire Wire Line
+	1600 2800 1550 2800
+Connection ~ 1550 2800
+Text GLabel 1500 2400 0    50   Input ~ 0
+Y_3
+Text GLabel 1500 2100 0    50   Input ~ 0
+Y_2
+Text GLabel 1500 1800 0    50   Input ~ 0
+Y_1
+Text GLabel 1500 1500 0    50   Input ~ 0
+Y_0
+Text GLabel 3500 1300 2    50   Input ~ 0
+MUX_2_OUT_0
+Text GLabel 3500 1900 2    50   Input ~ 0
+MUX_2_OUT_1
+Text GLabel 3500 2500 2    50   Input ~ 0
+MUX_2_OUT_2
+Text GLabel 3500 3100 2    50   Input ~ 0
+MUX_2_OUT_3
+Wire Wire Line
+	2100 3200 2100 3150
+Wire Wire Line
+	2100 3150 1550 3150
+Connection ~ 2100 3150
+Wire Wire Line
+	2100 3150 2100 3100
+Wire Wire Line
+	1550 2800 1550 3150
+$Comp
+L 74xx:74LS86 U?
+U 1 1 5F1A5992
+P 3200 1300
+AR Path="/5EEBD170/5F1A5992" Ref="U?"  Part="1" 
+AR Path="/5EEBD85A/5F1A5992" Ref="U13"  Part="1" 
+F 0 "U13" H 3200 1625 50  0000 C CNN
+F 1 "74LS86" H 3200 1534 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 1300 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 1300 50  0001 C CNN
+	1    3200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 2 1 5F1A5998
+P 3200 1900
+AR Path="/5EEBD170/5F1A5998" Ref="U?"  Part="2" 
+AR Path="/5EEBD85A/5F1A5998" Ref="U13"  Part="2" 
+F 0 "U13" H 3200 2225 50  0000 C CNN
+F 1 "74LS86" H 3200 2134 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 1900 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 1900 50  0001 C CNN
+	2    3200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 3 1 5F1A599E
+P 3200 2500
+AR Path="/5EEBD170/5F1A599E" Ref="U?"  Part="3" 
+AR Path="/5EEBD85A/5F1A599E" Ref="U13"  Part="3" 
+F 0 "U13" H 3200 2825 50  0000 C CNN
+F 1 "74LS86" H 3200 2734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 2500 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 2500 50  0001 C CNN
+	3    3200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 4 1 5F1A59A4
+P 3200 3100
+AR Path="/5EEBD170/5F1A59A4" Ref="U?"  Part="4" 
+AR Path="/5EEBD85A/5F1A59A4" Ref="U13"  Part="4" 
+F 0 "U13" H 3200 3425 50  0000 C CNN
+F 1 "74LS86" H 3200 3334 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3200 3100 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3200 3100 50  0001 C CNN
+	4    3200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 5 1 5F1A59AA
+P 8850 2200
+AR Path="/5EEBD170/5F1A59AA" Ref="U?"  Part="5" 
+AR Path="/5EEBD85A/5F1A59AA" Ref="U13"  Part="5" 
+F 0 "U13" H 9080 2246 50  0000 L CNN
+F 1 "74LS86" H 9080 2155 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8850 2200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 8850 2200 50  0001 C CNN
+	5    8850 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F1A59B0
+P 2350 1200
+AR Path="/5F1A59B0" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F1A59B0" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD85A/5F1A59B0" Ref="#PWR0123"  Part="1" 
+F 0 "#PWR0123" H 2350 1050 50  0001 C CNN
+F 1 "+5V" H 2365 1373 50  0000 C CNN
+F 2 "" H 2350 1200 50  0001 C CNN
+F 3 "" H 2350 1200 50  0001 C CNN
+	1    2350 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1200 2350 1200
+$Comp
+L power:GND #PWR?
+U 1 1 5F1A59B7
+P 8850 2700
+AR Path="/5F1A59B7" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F1A59B7" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD85A/5F1A59B7" Ref="#PWR0124"  Part="1" 
+F 0 "#PWR0124" H 8850 2450 50  0001 C CNN
+F 1 "GND" H 8855 2527 50  0000 C CNN
+F 2 "" H 8850 2700 50  0001 C CNN
+F 3 "" H 8850 2700 50  0001 C CNN
+	1    8850 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F1A59BD
+P 8850 1700
+AR Path="/5F1A59BD" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F1A59BD" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD85A/5F1A59BD" Ref="#PWR0125"  Part="1" 
+F 0 "#PWR0125" H 8850 1550 50  0001 C CNN
+F 1 "+5V" H 8865 1873 50  0000 C CNN
+F 2 "" H 8850 1700 50  0001 C CNN
+F 3 "" H 8850 1700 50  0001 C CNN
+	1    8850 1700
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 3200 0    50   Input ~ 0
+NY
+Wire Wire Line
+	2700 3200 2800 3200
+Wire Wire Line
+	2800 3200 2800 2600
+Wire Wire Line
+	2800 1400 2900 1400
+Connection ~ 2800 3200
+Wire Wire Line
+	2800 3200 2900 3200
+Wire Wire Line
+	2800 2000 2900 2000
+Connection ~ 2800 2000
+Wire Wire Line
+	2800 2000 2800 1400
+Wire Wire Line
+	2800 2600 2900 2600
+Connection ~ 2800 2600
+Wire Wire Line
+	2800 2600 2800 2000
+Wire Wire Line
+	2600 2100 2700 2100
+Wire Wire Line
+	2600 1500 2600 1200
+Wire Wire Line
+	2600 2400 2600 3000
+Wire Wire Line
+	2700 2100 2700 2400
+Wire Wire Line
+	2600 1200 2900 1200
+Wire Wire Line
+	2600 1800 2900 1800
+Wire Wire Line
+	2600 3000 2900 3000
+Wire Wire Line
+	2700 2400 2900 2400
+Wire Wire Line
+	1100 2700 1600 2700
+Text GLabel 1100 2700 0    50   Input ~ 0
+ZY
+$EndSCHEMATC
