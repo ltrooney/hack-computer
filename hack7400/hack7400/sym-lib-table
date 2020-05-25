@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name hack7400-rescue)(type Legacy)(uri ${KIPRJMOD}/hack7400-rescue.lib)(options "")(descr ""))
+)

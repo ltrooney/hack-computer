@@ -1,0 +1,888 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5EEE261E
+P 1950 1950
+AR Path="/5EEE261E" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5EEE261E" Ref="U1"  Part="1" 
+F 0 "U1" H 1950 3031 50  0000 C CNN
+F 1 "74LS157" H 1950 2940 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 1950 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 1950 1950 50  0001 C CNN
+	1    1950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EEE2624
+P 1950 3050
+AR Path="/5EEE2624" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EEE2624" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 1950 2800 50  0001 C CNN
+F 1 "GND" H 1955 2877 50  0000 C CNN
+F 2 "" H 1950 3050 50  0001 C CNN
+F 3 "" H 1950 3050 50  0001 C CNN
+	1    1950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1450 1400 1450
+Wire Wire Line
+	1400 1450 1400 1750
+Wire Wire Line
+	1450 1750 1400 1750
+Connection ~ 1400 1750
+Wire Wire Line
+	1400 1750 1400 2050
+Wire Wire Line
+	1450 2050 1400 2050
+Connection ~ 1400 2050
+Wire Wire Line
+	1400 2050 1400 2350
+Wire Wire Line
+	1450 2350 1400 2350
+Connection ~ 1400 2350
+Wire Wire Line
+	1400 2350 1400 2650
+Wire Wire Line
+	1350 1350 1450 1350
+Wire Wire Line
+	1350 1650 1450 1650
+Wire Wire Line
+	1350 1950 1450 1950
+Wire Wire Line
+	1350 2250 1450 2250
+Wire Wire Line
+	1450 2650 1400 2650
+Connection ~ 1400 2650
+Text GLabel 1350 2250 0    50   Input ~ 0
+X_3
+Text GLabel 1350 1950 0    50   Input ~ 0
+X_2
+Text GLabel 1350 1650 0    50   Input ~ 0
+X_1
+Text GLabel 1350 1350 0    50   Input ~ 0
+X_0
+Text GLabel 3350 1150 2    50   Input ~ 0
+MUX_1_OUT_0
+Text GLabel 3350 1750 2    50   Input ~ 0
+MUX_1_OUT_1
+Text GLabel 3350 2350 2    50   Input ~ 0
+MUX_1_OUT_2
+Text GLabel 3350 2950 2    50   Input ~ 0
+MUX_1_OUT_3
+Wire Wire Line
+	1950 3050 1950 3000
+Wire Wire Line
+	1950 3000 1400 3000
+Connection ~ 1950 3000
+Wire Wire Line
+	1950 3000 1950 2950
+Wire Wire Line
+	1400 2650 1400 3000
+$Comp
+L 74xx:74LS86 U5
+U 1 1 5EF04C59
+P 3050 1150
+F 0 "U5" H 3050 1475 50  0000 C CNN
+F 1 "74LS86" H 3050 1384 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3050 1150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3050 1150 50  0001 C CNN
+	1    3050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U5
+U 2 1 5EF08D23
+P 3050 1750
+F 0 "U5" H 3050 2075 50  0000 C CNN
+F 1 "74LS86" H 3050 1984 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3050 1750 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3050 1750 50  0001 C CNN
+	2    3050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U5
+U 3 1 5EF0B1FE
+P 3050 2350
+F 0 "U5" H 3050 2675 50  0000 C CNN
+F 1 "74LS86" H 3050 2584 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3050 2350 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3050 2350 50  0001 C CNN
+	3    3050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U5
+U 4 1 5EF0D8C8
+P 3050 2950
+F 0 "U5" H 3050 3275 50  0000 C CNN
+F 1 "74LS86" H 3050 3184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3050 2950 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3050 2950 50  0001 C CNN
+	4    3050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U5
+U 5 1 5EF0FC90
+P 8700 2050
+F 0 "U5" H 8930 2096 50  0000 L CNN
+F 1 "74LS86" H 8930 2005 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8700 2050 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 8700 2050 50  0001 C CNN
+	5    8700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EEE262A
+P 2200 1050
+AR Path="/5EEE262A" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EEE262A" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 2200 900 50  0001 C CNN
+F 1 "+5V" H 2215 1223 50  0000 C CNN
+F 2 "" H 2200 1050 50  0001 C CNN
+F 3 "" H 2200 1050 50  0001 C CNN
+	1    2200 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1050 2200 1050
+$Comp
+L power:GND #PWR?
+U 1 1 5EF43BCE
+P 8700 2550
+AR Path="/5EF43BCE" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EF43BCE" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 8700 2300 50  0001 C CNN
+F 1 "GND" H 8705 2377 50  0000 C CNN
+F 2 "" H 8700 2550 50  0001 C CNN
+F 3 "" H 8700 2550 50  0001 C CNN
+	1    8700 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EF48C5C
+P 8700 1550
+AR Path="/5EF48C5C" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EF48C5C" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 8700 1400 50  0001 C CNN
+F 1 "+5V" H 8715 1723 50  0000 C CNN
+F 2 "" H 8700 1550 50  0001 C CNN
+F 3 "" H 8700 1550 50  0001 C CNN
+	1    8700 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2550 3050 0    50   Input ~ 0
+NX
+Wire Wire Line
+	2550 3050 2650 3050
+Wire Wire Line
+	2650 3050 2650 2450
+Wire Wire Line
+	2650 1250 2750 1250
+Connection ~ 2650 3050
+Wire Wire Line
+	2650 3050 2750 3050
+Wire Wire Line
+	2650 1850 2750 1850
+Connection ~ 2650 1850
+Wire Wire Line
+	2650 1850 2650 1250
+Wire Wire Line
+	2650 2450 2750 2450
+Connection ~ 2650 2450
+Wire Wire Line
+	2650 2450 2650 1850
+Wire Wire Line
+	2450 1950 2550 1950
+Wire Wire Line
+	2450 1350 2450 1050
+Wire Wire Line
+	2450 2250 2450 2850
+Wire Wire Line
+	2550 1950 2550 2250
+Wire Wire Line
+	2450 1050 2750 1050
+Wire Wire Line
+	2450 1650 2750 1650
+Wire Wire Line
+	2450 2850 2750 2850
+Wire Wire Line
+	2550 2250 2750 2250
+Wire Wire Line
+	950  2550 1450 2550
+Text GLabel 950  2550 0    50   Input ~ 0
+ZX
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5EFFF334
+P 5450 2000
+AR Path="/5EFFF334" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5EFFF334" Ref="U2"  Part="1" 
+F 0 "U2" H 5450 3081 50  0000 C CNN
+F 1 "74LS157" H 5450 2990 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 5450 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 5450 2000 50  0001 C CNN
+	1    5450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EFFF33E
+P 5450 3100
+AR Path="/5EFFF33E" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EFFF33E" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 5450 2850 50  0001 C CNN
+F 1 "GND" H 5455 2927 50  0000 C CNN
+F 2 "" H 5450 3100 50  0001 C CNN
+F 3 "" H 5450 3100 50  0001 C CNN
+	1    5450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1500 4900 1500
+Wire Wire Line
+	4900 1500 4900 1800
+Wire Wire Line
+	4950 1800 4900 1800
+Connection ~ 4900 1800
+Wire Wire Line
+	4900 1800 4900 2100
+Wire Wire Line
+	4950 2100 4900 2100
+Connection ~ 4900 2100
+Wire Wire Line
+	4900 2100 4900 2400
+Wire Wire Line
+	4950 2400 4900 2400
+Connection ~ 4900 2400
+Wire Wire Line
+	4900 2400 4900 2700
+Wire Wire Line
+	4850 1400 4950 1400
+Wire Wire Line
+	4850 1700 4950 1700
+Wire Wire Line
+	4850 2000 4950 2000
+Wire Wire Line
+	4850 2300 4950 2300
+Wire Wire Line
+	4950 2700 4900 2700
+Connection ~ 4900 2700
+Text GLabel 4850 2300 0    50   Input ~ 0
+X_7
+Text GLabel 4850 2000 0    50   Input ~ 0
+X_6
+Text GLabel 4850 1700 0    50   Input ~ 0
+X_5
+Text GLabel 4850 1400 0    50   Input ~ 0
+X_4
+Text GLabel 6850 1200 2    50   Input ~ 0
+MUX_1_OUT_4
+Text GLabel 6850 1800 2    50   Input ~ 0
+MUX_1_OUT_5
+Text GLabel 6850 2400 2    50   Input ~ 0
+MUX_1_OUT_6
+Text GLabel 6850 3000 2    50   Input ~ 0
+MUX_1_OUT_7
+Wire Wire Line
+	5450 3100 5450 3050
+Wire Wire Line
+	5450 3050 4900 3050
+Connection ~ 5450 3050
+Wire Wire Line
+	5450 3050 5450 3000
+Wire Wire Line
+	4900 2700 4900 3050
+$Comp
+L 74xx:74LS86 U6
+U 1 1 5EFFF366
+P 6550 1200
+F 0 "U6" H 6550 1525 50  0000 C CNN
+F 1 "74LS86" H 6550 1434 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 1200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 1200 50  0001 C CNN
+	1    6550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U6
+U 2 1 5EFFF370
+P 6550 1800
+F 0 "U6" H 6550 2125 50  0000 C CNN
+F 1 "74LS86" H 6550 2034 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 1800 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 1800 50  0001 C CNN
+	2    6550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U6
+U 3 1 5EFFF37A
+P 6550 2400
+F 0 "U6" H 6550 2725 50  0000 C CNN
+F 1 "74LS86" H 6550 2634 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 2400 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 2400 50  0001 C CNN
+	3    6550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U6
+U 4 1 5EFFF384
+P 6550 3000
+F 0 "U6" H 6550 3325 50  0000 C CNN
+F 1 "74LS86" H 6550 3234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 3000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 3000 50  0001 C CNN
+	4    6550 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EFFF38E
+P 5700 1100
+AR Path="/5EFFF38E" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5EFFF38E" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 5700 950 50  0001 C CNN
+F 1 "+5V" H 5715 1273 50  0000 C CNN
+F 2 "" H 5700 1100 50  0001 C CNN
+F 3 "" H 5700 1100 50  0001 C CNN
+	1    5700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1100 5700 1100
+Text GLabel 6050 3100 0    50   Input ~ 0
+NX
+Wire Wire Line
+	6050 3100 6150 3100
+Wire Wire Line
+	6150 3100 6150 2500
+Wire Wire Line
+	6150 1300 6250 1300
+Connection ~ 6150 3100
+Wire Wire Line
+	6150 3100 6250 3100
+Wire Wire Line
+	6150 1900 6250 1900
+Connection ~ 6150 1900
+Wire Wire Line
+	6150 1900 6150 1300
+Wire Wire Line
+	6150 2500 6250 2500
+Connection ~ 6150 2500
+Wire Wire Line
+	6150 2500 6150 1900
+Wire Wire Line
+	5950 2000 6050 2000
+Wire Wire Line
+	5950 1400 5950 1100
+Wire Wire Line
+	5950 2300 5950 2900
+Wire Wire Line
+	6050 2000 6050 2300
+Wire Wire Line
+	5950 1100 6250 1100
+Wire Wire Line
+	5950 1700 6250 1700
+Wire Wire Line
+	5950 2900 6250 2900
+Wire Wire Line
+	6050 2300 6250 2300
+Wire Wire Line
+	4450 2600 4950 2600
+Text GLabel 4450 2600 0    50   Input ~ 0
+ZX
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5F0698B0
+P 2050 4750
+AR Path="/5F0698B0" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5F0698B0" Ref="U3"  Part="1" 
+F 0 "U3" H 2050 5831 50  0000 C CNN
+F 1 "74LS157" H 2050 5740 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2050 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 2050 4750 50  0001 C CNN
+	1    2050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0698BA
+P 2050 5850
+AR Path="/5F0698BA" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0698BA" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 2050 5600 50  0001 C CNN
+F 1 "GND" H 2055 5677 50  0000 C CNN
+F 2 "" H 2050 5850 50  0001 C CNN
+F 3 "" H 2050 5850 50  0001 C CNN
+	1    2050 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4250 1500 4250
+Wire Wire Line
+	1500 4250 1500 4550
+Wire Wire Line
+	1550 4550 1500 4550
+Connection ~ 1500 4550
+Wire Wire Line
+	1500 4550 1500 4850
+Wire Wire Line
+	1550 4850 1500 4850
+Connection ~ 1500 4850
+Wire Wire Line
+	1500 4850 1500 5150
+Wire Wire Line
+	1550 5150 1500 5150
+Connection ~ 1500 5150
+Wire Wire Line
+	1500 5150 1500 5450
+Wire Wire Line
+	1450 4150 1550 4150
+Wire Wire Line
+	1450 4450 1550 4450
+Wire Wire Line
+	1450 4750 1550 4750
+Wire Wire Line
+	1450 5050 1550 5050
+Wire Wire Line
+	1550 5450 1500 5450
+Connection ~ 1500 5450
+Text GLabel 1450 5050 0    50   Input ~ 0
+X_11
+Text GLabel 1450 4750 0    50   Input ~ 0
+X_10
+Text GLabel 1450 4450 0    50   Input ~ 0
+X_9
+Text GLabel 1450 4150 0    50   Input ~ 0
+X_8
+Text GLabel 3450 3950 2    50   Input ~ 0
+MUX_1_OUT_8
+Text GLabel 3450 4550 2    50   Input ~ 0
+MUX_1_OUT_9
+Text GLabel 3450 5150 2    50   Input ~ 0
+MUX_1_OUT_10
+Text GLabel 3450 5750 2    50   Input ~ 0
+MUX_1_OUT_11
+Wire Wire Line
+	2050 5850 2050 5800
+Wire Wire Line
+	2050 5800 1500 5800
+Connection ~ 2050 5800
+Wire Wire Line
+	2050 5800 2050 5750
+Wire Wire Line
+	1500 5450 1500 5800
+$Comp
+L 74xx:74LS86 U7
+U 1 1 5F0698E2
+P 3150 3950
+F 0 "U7" H 3150 4275 50  0000 C CNN
+F 1 "74LS86" H 3150 4184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 3950 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3150 3950 50  0001 C CNN
+	1    3150 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U7
+U 2 1 5F0698EC
+P 3150 4550
+F 0 "U7" H 3150 4875 50  0000 C CNN
+F 1 "74LS86" H 3150 4784 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 4550 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3150 4550 50  0001 C CNN
+	2    3150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U7
+U 3 1 5F0698F6
+P 3150 5150
+F 0 "U7" H 3150 5475 50  0000 C CNN
+F 1 "74LS86" H 3150 5384 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 5150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3150 5150 50  0001 C CNN
+	3    3150 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U7
+U 4 1 5F069900
+P 3150 5750
+F 0 "U7" H 3150 6075 50  0000 C CNN
+F 1 "74LS86" H 3150 5984 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 5750 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 3150 5750 50  0001 C CNN
+	4    3150 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F06990A
+P 2300 3850
+AR Path="/5F06990A" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F06990A" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 2300 3700 50  0001 C CNN
+F 1 "+5V" H 2315 4023 50  0000 C CNN
+F 2 "" H 2300 3850 50  0001 C CNN
+F 3 "" H 2300 3850 50  0001 C CNN
+	1    2300 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3850 2300 3850
+Text GLabel 2650 5850 0    50   Input ~ 0
+NX
+Wire Wire Line
+	2650 5850 2750 5850
+Wire Wire Line
+	2750 5850 2750 5250
+Wire Wire Line
+	2750 4050 2850 4050
+Connection ~ 2750 5850
+Wire Wire Line
+	2750 5850 2850 5850
+Wire Wire Line
+	2750 4650 2850 4650
+Connection ~ 2750 4650
+Wire Wire Line
+	2750 4650 2750 4050
+Wire Wire Line
+	2750 5250 2850 5250
+Connection ~ 2750 5250
+Wire Wire Line
+	2750 5250 2750 4650
+Wire Wire Line
+	2550 4750 2650 4750
+Wire Wire Line
+	2550 4150 2550 3850
+Wire Wire Line
+	2550 5050 2550 5650
+Wire Wire Line
+	2650 4750 2650 5050
+Wire Wire Line
+	2550 3850 2850 3850
+Wire Wire Line
+	2550 4450 2850 4450
+Wire Wire Line
+	2550 5650 2850 5650
+Wire Wire Line
+	2650 5050 2850 5050
+Wire Wire Line
+	1050 5350 1550 5350
+Text GLabel 1050 5350 0    50   Input ~ 0
+ZX
+$Comp
+L 74xx:74LS157 U?
+U 1 1 5F06992B
+P 5450 4750
+AR Path="/5F06992B" Ref="U?"  Part="1" 
+AR Path="/5EEBD170/5F06992B" Ref="U4"  Part="1" 
+F 0 "U4" H 5450 5831 50  0000 C CNN
+F 1 "74LS157" H 5450 5740 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 5450 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 5450 4750 50  0001 C CNN
+	1    5450 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F069935
+P 5450 5850
+AR Path="/5F069935" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F069935" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 5450 5600 50  0001 C CNN
+F 1 "GND" H 5455 5677 50  0000 C CNN
+F 2 "" H 5450 5850 50  0001 C CNN
+F 3 "" H 5450 5850 50  0001 C CNN
+	1    5450 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4250 4900 4250
+Wire Wire Line
+	4900 4250 4900 4550
+Wire Wire Line
+	4950 4550 4900 4550
+Connection ~ 4900 4550
+Wire Wire Line
+	4900 4550 4900 4850
+Wire Wire Line
+	4950 4850 4900 4850
+Connection ~ 4900 4850
+Wire Wire Line
+	4900 4850 4900 5150
+Wire Wire Line
+	4950 5150 4900 5150
+Connection ~ 4900 5150
+Wire Wire Line
+	4900 5150 4900 5450
+Wire Wire Line
+	4850 4150 4950 4150
+Wire Wire Line
+	4850 4450 4950 4450
+Wire Wire Line
+	4850 4750 4950 4750
+Wire Wire Line
+	4850 5050 4950 5050
+Wire Wire Line
+	4950 5450 4900 5450
+Connection ~ 4900 5450
+Text GLabel 4850 5050 0    50   Input ~ 0
+X_15
+Text GLabel 4850 4750 0    50   Input ~ 0
+X_14
+Text GLabel 4850 4450 0    50   Input ~ 0
+X_13
+Text GLabel 4850 4150 0    50   Input ~ 0
+X_12
+Text GLabel 6850 3950 2    50   Input ~ 0
+MUX_1_OUT_12
+Text GLabel 6850 4550 2    50   Input ~ 0
+MUX_1_OUT_13
+Text GLabel 6850 5150 2    50   Input ~ 0
+MUX_1_OUT_14
+Text GLabel 6850 5750 2    50   Input ~ 0
+MUX_1_OUT_15
+Wire Wire Line
+	5450 5850 5450 5800
+Wire Wire Line
+	5450 5800 4900 5800
+Connection ~ 5450 5800
+Wire Wire Line
+	5450 5800 5450 5750
+Wire Wire Line
+	4900 5450 4900 5800
+$Comp
+L 74xx:74LS86 U8
+U 1 1 5F06995D
+P 6550 3950
+F 0 "U8" H 6550 4275 50  0000 C CNN
+F 1 "74LS86" H 6550 4184 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 3950 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 3950 50  0001 C CNN
+	1    6550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U8
+U 2 1 5F069967
+P 6550 4550
+F 0 "U8" H 6550 4875 50  0000 C CNN
+F 1 "74LS86" H 6550 4784 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 4550 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 4550 50  0001 C CNN
+	2    6550 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U8
+U 3 1 5F069971
+P 6550 5150
+F 0 "U8" H 6550 5475 50  0000 C CNN
+F 1 "74LS86" H 6550 5384 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 5150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 5150 50  0001 C CNN
+	3    6550 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U8
+U 4 1 5F06997B
+P 6550 5750
+F 0 "U8" H 6550 6075 50  0000 C CNN
+F 1 "74LS86" H 6550 5984 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 5750 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6550 5750 50  0001 C CNN
+	4    6550 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F069985
+P 5700 3850
+AR Path="/5F069985" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F069985" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 5700 3700 50  0001 C CNN
+F 1 "+5V" H 5715 4023 50  0000 C CNN
+F 2 "" H 5700 3850 50  0001 C CNN
+F 3 "" H 5700 3850 50  0001 C CNN
+	1    5700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3850 5700 3850
+Text GLabel 6050 5850 0    50   Input ~ 0
+NX
+Wire Wire Line
+	6050 5850 6150 5850
+Wire Wire Line
+	6150 5850 6150 5250
+Wire Wire Line
+	6150 4050 6250 4050
+Connection ~ 6150 5850
+Wire Wire Line
+	6150 5850 6250 5850
+Wire Wire Line
+	6150 4650 6250 4650
+Connection ~ 6150 4650
+Wire Wire Line
+	6150 4650 6150 4050
+Wire Wire Line
+	6150 5250 6250 5250
+Connection ~ 6150 5250
+Wire Wire Line
+	6150 5250 6150 4650
+Wire Wire Line
+	5950 4750 6050 4750
+Wire Wire Line
+	5950 4150 5950 3850
+Wire Wire Line
+	5950 5050 5950 5650
+Wire Wire Line
+	6050 4750 6050 5050
+Wire Wire Line
+	5950 3850 6250 3850
+Wire Wire Line
+	5950 4450 6250 4450
+Wire Wire Line
+	5950 5650 6250 5650
+Wire Wire Line
+	6050 5050 6250 5050
+Wire Wire Line
+	4450 5350 4950 5350
+Text GLabel 4450 5350 0    50   Input ~ 0
+ZX
+$Comp
+L 74xx:74LS86 U6
+U 5 1 5F0EBB5A
+P 10000 2050
+F 0 "U6" H 10230 2096 50  0000 L CNN
+F 1 "74LS86" H 10230 2005 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10000 2050 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 10000 2050 50  0001 C CNN
+	5    10000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0EBB64
+P 10000 2550
+AR Path="/5F0EBB64" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0EBB64" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 10000 2300 50  0001 C CNN
+F 1 "GND" H 10005 2377 50  0000 C CNN
+F 2 "" H 10000 2550 50  0001 C CNN
+F 3 "" H 10000 2550 50  0001 C CNN
+	1    10000 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F0EBB6E
+P 10000 1550
+AR Path="/5F0EBB6E" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0EBB6E" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 10000 1400 50  0001 C CNN
+F 1 "+5V" H 10015 1723 50  0000 C CNN
+F 2 "" H 10000 1550 50  0001 C CNN
+F 3 "" H 10000 1550 50  0001 C CNN
+	1    10000 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U7
+U 5 1 5F0F3297
+P 8700 4900
+F 0 "U7" H 8930 4946 50  0000 L CNN
+F 1 "74LS86" H 8930 4855 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8700 4900 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 8700 4900 50  0001 C CNN
+	5    8700 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0F32A1
+P 8700 5400
+AR Path="/5F0F32A1" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0F32A1" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 8700 5150 50  0001 C CNN
+F 1 "GND" H 8705 5227 50  0000 C CNN
+F 2 "" H 8700 5400 50  0001 C CNN
+F 3 "" H 8700 5400 50  0001 C CNN
+	1    8700 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F0F32AB
+P 8700 4400
+AR Path="/5F0F32AB" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0F32AB" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 8700 4250 50  0001 C CNN
+F 1 "+5V" H 8715 4573 50  0000 C CNN
+F 2 "" H 8700 4400 50  0001 C CNN
+F 3 "" H 8700 4400 50  0001 C CNN
+	1    8700 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U8
+U 5 1 5F0F32B5
+P 10000 4900
+F 0 "U8" H 10230 4946 50  0000 L CNN
+F 1 "74LS86" H 10230 4855 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10000 4900 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 10000 4900 50  0001 C CNN
+	5    10000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0F32BF
+P 10000 5400
+AR Path="/5F0F32BF" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0F32BF" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR0120" H 10000 5150 50  0001 C CNN
+F 1 "GND" H 10005 5227 50  0000 C CNN
+F 2 "" H 10000 5400 50  0001 C CNN
+F 3 "" H 10000 5400 50  0001 C CNN
+	1    10000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F0F32C9
+P 10000 4400
+AR Path="/5F0F32C9" Ref="#PWR?"  Part="1" 
+AR Path="/5EEBD170/5F0F32C9" Ref="#PWR0121"  Part="1" 
+F 0 "#PWR0121" H 10000 4250 50  0001 C CNN
+F 1 "+5V" H 10015 4573 50  0000 C CNN
+F 2 "" H 10000 4400 50  0001 C CNN
+F 3 "" H 10000 4400 50  0001 C CNN
+	1    10000 4400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
